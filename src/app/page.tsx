@@ -1,5 +1,5 @@
 import { HOME_DATA } from "@/utils/static/home";
-import HomeCardsGrid from "./HomeCardsGrid";
+import HomeCardsGrid from "../components/home/HomeCardsGrid";
 
 export default function Home() {
   return (
