@@ -4,6 +4,8 @@ export const HOME_DATA = {
 		cards: [
 			{
 				title: 'Left to right',
+				description: 'One way transition',
+				url: '/ltr',
 				img: {
 					file: '',
 					alt: '',
@@ -11,6 +13,8 @@ export const HOME_DATA = {
 			},
 			{
 				title: 'Right to left',
+				description: '',
+				url: '',
 				img: {
 					file: '',
 					alt: '',
@@ -18,6 +22,8 @@ export const HOME_DATA = {
 			},
 			{
 				title: 'Top to bottom',
+				description: '',
+				url: '',
 				img: {
 					file: '',
 					alt: '',
@@ -25,6 +31,8 @@ export const HOME_DATA = {
 			},
 			{
 				title: 'Bottom to top',
+				description: '',
+				url: '',
 				img: {
 					file: '',
 					alt: '',

@@ -1,15 +1,15 @@
 import { HomeCard } from "@/components/home/HomeCard";
+import { homeCardsGridTypes } from "@/types/homeCardsGridTypes";
 
-const HomeCardsGrid = ({ title, cards }) => {
+const HomeCardsGrid = ({ title, cards }: homeCardsGridTypes) => {
     return (
         <section className="container grid auto-cols-[minmax(0,_2fr)] gap-4 items-center justify-center">
             <h3 className="col-span-3 text-center text-white text-4xl">{title}</h3>
             {
-                cards.map((card) => (
+                cards.map((props) => (
                     <HomeCard
-                        key={card.title}
-                        title={card.title}
-                        url={card.url}
+                        key={props.title}
+                        {...props}
                     />
                 ))
             }
