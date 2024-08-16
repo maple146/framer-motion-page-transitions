@@ -5,7 +5,7 @@ export const HOME_DATA = {
 			{
 				title: 'Left to right',
 				description: 'One way transition',
-				url: '/ltr',
+				url: '/left-to-right',
 				img: {
 					file: '',
 					alt: '',
@@ -14,16 +14,16 @@ export const HOME_DATA = {
 			{
 				title: 'Right to left',
 				description: 'One way transition',
-				url: '/rtl',
+				url: '/right-to-left',
 				img: {
 					file: '',
 					alt: '',
 				},
 			},
 			{
-				title: 'Back and Forth',
+				title: 'Horizontal back and forth',
 				description: 'Bidirectional transition',
-				url: '/back-and-forth',
+				url: '/horizontal-back-and-forth',
 				img: {
 					file: '',
 					alt: '',
@@ -32,7 +32,7 @@ export const HOME_DATA = {
 			{
 				title: 'Top to Bottom',
 				description: 'One way transition',
-				url: '/ttb',
+				url: '/top-to-bottom',
 				img: {
 					file: '',
 					alt: '',
@@ -41,7 +41,7 @@ export const HOME_DATA = {
 			{
 				title: 'Bottom to Top',
 				description: 'One way transition',
-				url: '/btt',
+				url: '/bottom-to-top',
 				img: {
 					file: '',
 					alt: '',

@@ -1,8 +1,8 @@
 "use client"
 import { useState } from "react";
 import { AnimatePresence, MotionConfig, motion } from 'framer-motion';
-import BottomContent from "@/components/btt/BottomContent";
-import TopContent from "@/components/btt/TopContent";
+import BottomContent from "@/components/bottom-to-top/BottomContent";
+import TopContent from "@/components/bottom-to-top/TopContent";
 
 const animationToTop = {
     initial: {

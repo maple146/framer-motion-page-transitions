@@ -1,12 +1,12 @@
 "use client"
 import { useState } from "react";
 import { AnimatePresence, MotionConfig, Variants, motion } from 'framer-motion';
-import RightSideContent from "@/components/back-and-forth/RightSideContent";
-import LeftSideContent from "@/components/back-and-forth/LeftSideContent";
+import RightContent from "@/components/horizontal-back-and-forth/RightContent";
+import LeftContent from "@/components/horizontal-back-and-forth/LeftContent";
 
 type Transition = true | false | null;
 
-const animationRTL: Variants = {
+const horizontalBackAndForthAnimation: Variants = {
     initial: (transition: Transition) => ({
         x: transition ? -1000 : 1000,
         opacity: 0,
@@ -21,7 +21,7 @@ const animationRTL: Variants = {
     }),
 };
 
-export default function BackAndForth() {
+export default function HorizontalBackAndForth() {
     const [transition, setTransition] = useState<boolean | null>(null)
 
     return (
@@ -29,7 +29,7 @@ export default function BackAndForth() {
             <motion.main
                 id='testing'
                 className="flex min-h-screen flex-col items-center justify-center overflow-hidden"
-                style={{ contain: 'paint' }}
+                style={{ contain: 'paint' }} // This fixes the overflow caused by elements moving from right to left.
             >
                 <AnimatePresence
                     mode='popLayout'
@@ -39,13 +39,13 @@ export default function BackAndForth() {
                     {
                         !transition && (
                             <motion.div
-                                key={'right-side'}
-                                variants={animationRTL}
+                                key={'right-section'}
+                                variants={horizontalBackAndForthAnimation}
                                 initial='initial'
                                 animate='target'
                                 exit='exit'
                             >
-                                <RightSideContent setTransition={setTransition} />
+                                <RightContent setTransition={setTransition} />
                             </motion.div>
                         )
                     }
@@ -57,14 +57,14 @@ export default function BackAndForth() {
                     {
                         transition && (
                             <motion.div
-                                key={'left-side'}
-                                variants={animationRTL}
+                                key={'left-section'}
+                                variants={horizontalBackAndForthAnimation}
                                 custom={transition}
                                 initial='initial'
                                 animate='target'
                                 exit='exit'
                             >
-                                <LeftSideContent setTransition={setTransition} />
+                                <LeftContent setTransition={setTransition} />
                             </motion.div>
                         )
                     }

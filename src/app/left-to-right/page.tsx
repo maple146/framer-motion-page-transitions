@@ -1,12 +1,12 @@
 "use client"
 import { useState } from "react";
 import { AnimatePresence, MotionConfig, motion } from 'framer-motion';
-import RightSideContent from "@/components/rtl/RightSideContent";
-import LeftSideContent from "@/components/rtl/LeftSideContent";
+import LeftContent from "@/components/left-to-right/LeftContent";
+import RightContent from "@/components/left-to-right/RightContent";
 
-const animationsToLeftSide = {
+const animationToRight = {
     initial: {
-        x: -1000,
+        x: 1000,
         opacity: 0,
     },
     target: {
@@ -14,21 +14,17 @@ const animationsToLeftSide = {
         opacity: 1,
     },
     exit: {
-        x: 1000,
+        x: -1000,
         opacity: 0,
     },
 };
 
-export default function RightToLeft() {
+export default function LeftToRight() {
     const [transition, setTransition] = useState<boolean | null>(null)
 
     return (
         <MotionConfig transition={{ duration: 3 }}>
-            <motion.main
-                id='testing'
-                className="flex min-h-screen flex-col items-center justify-center overflow-hidden"
-                style={{ contain: 'paint' }} // This fixes the overflow caused by elements moving from right to left.
-            >
+            <motion.main className="flex min-h-screen flex-col items-center justify-center overflow-hidden">
                 <AnimatePresence
                     mode='popLayout'
                     initial={false}
@@ -36,13 +32,13 @@ export default function RightToLeft() {
                     {
                         !transition && (
                             <motion.div
-                                key={'right-side'}
-                                variants={animationsToLeftSide}
+                                key={'left-section'}
+                                variants={animationToRight}
                                 initial='initial'
                                 animate='target'
                                 exit='exit'
                             >
-                                <RightSideContent setTransition={setTransition} />
+                                <LeftContent setTransition={setTransition} />
                             </motion.div>
                         )
                     }
@@ -53,13 +49,13 @@ export default function RightToLeft() {
                     {
                         transition && (
                             <motion.div
-                                key={'left-side'}
-                                variants={animationsToLeftSide}
+                                key={'right-section'}
+                                variants={animationToRight}
                                 initial='initial'
                                 animate='target'
                                 exit='exit'
                             >
-                                <LeftSideContent />
+                                <RightContent />
                             </motion.div>
                         )
                     }

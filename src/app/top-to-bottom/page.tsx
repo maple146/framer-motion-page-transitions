@@ -1,25 +1,25 @@
 "use client"
 import { useState } from "react";
 import { AnimatePresence, MotionConfig, motion } from 'framer-motion';
-import LeftSideContent from "@/components/ltr/LeftSideContent";
-import RightSideContent from "@/components/ltr/RightSideContent";
+import BottomContent from "@/components/top-to-bottom/BottomContent";
+import TopContent from "@/components/top-to-bottom/TopContent";
 
-const animationsToRightSide = {
+const animationToBottom = {
     initial: {
-        x: 1000,
+        y: 1000,
         opacity: 0,
     },
     target: {
-        x: 0,
+        y: 0,
         opacity: 1,
     },
     exit: {
-        x: -1000,
+        y: -1000,
         opacity: 0,
     },
 };
 
-export default function LeftToRight() {
+export default function TopToBottom() {
     const [transition, setTransition] = useState<boolean | null>(null)
 
     return (
@@ -32,13 +32,13 @@ export default function LeftToRight() {
                     {
                         !transition && (
                             <motion.div
-                                key={'left-side'}
-                                variants={animationsToRightSide}
+                                key={'top-section'}
+                                variants={animationToBottom}
                                 initial='initial'
                                 animate='target'
                                 exit='exit'
                             >
-                                <LeftSideContent setTransition={setTransition} />
+                                <TopContent setTransition={setTransition} />
                             </motion.div>
                         )
                     }
@@ -49,13 +49,13 @@ export default function LeftToRight() {
                     {
                         transition && (
                             <motion.div
-                                key={'right-side'}
-                                variants={animationsToRightSide}
+                                key={'bottom-section'}
+                                variants={animationToBottom}
                                 initial='initial'
                                 animate='target'
                                 exit='exit'
                             >
-                                <RightSideContent />
+                                <BottomContent />
                             </motion.div>
                         )
                     }
