@@ -38,6 +38,15 @@ export const HOME_DATA = {
 					alt: '',
 				},
 			},
+			{
+				title: 'Bottom to Top',
+				description: 'One way transition',
+				url: '/btt',
+				img: {
+					file: '',
+					alt: '',
+				},
+			},
 		],
 	},
 }
