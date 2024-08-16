@@ -30,9 +30,9 @@ export const HOME_DATA = {
 				},
 			},
 			{
-				title: 'Bottom to top',
-				description: '',
-				url: '',
+				title: 'Top to Bottom',
+				description: 'One way transition',
+				url: '/ttb',
 				img: {
 					file: '',
 					alt: '',
