@@ -13,7 +13,7 @@ export const HOME_DATA = {
 			},
 			{
 				title: 'Right to left',
-				description: 'Bidirectional transition',
+				description: 'One way transition',
 				url: '/rtl',
 				img: {
 					file: '',
@@ -21,9 +21,9 @@ export const HOME_DATA = {
 				},
 			},
 			{
-				title: 'Top to bottom',
-				description: '',
-				url: '',
+				title: 'Back and Forth',
+				description: 'Bidirectional transition',
+				url: '/back-and-forth',
 				img: {
 					file: '',
 					alt: '',
