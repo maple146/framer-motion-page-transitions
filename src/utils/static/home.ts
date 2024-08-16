@@ -13,8 +13,8 @@ export const HOME_DATA = {
 			},
 			{
 				title: 'Right to left',
-				description: '',
-				url: '',
+				description: 'Bidirectional transition',
+				url: '/rtl',
 				img: {
 					file: '',
 					alt: '',
