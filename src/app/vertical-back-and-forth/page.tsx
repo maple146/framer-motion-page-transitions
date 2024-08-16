@@ -27,7 +27,6 @@ export default function VerticalBackAndForth() {
     return (
         <MotionConfig transition={{ duration: 3 }}>
             <motion.main
-                id='testing'
                 className="flex min-h-screen flex-col items-center justify-center overflow-hidden"
                 style={{ contain: 'paint' }} // This fixes the overflow caused by elements moving from bottom to top.
             >
