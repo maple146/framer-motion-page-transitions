@@ -47,6 +47,15 @@ export const HOME_DATA = {
 					alt: '',
 				},
 			},
+			{
+				title: 'Vertical back and forth',
+				description: 'Bidirectional transition',
+				url: '/vertical-back-and-forth',
+				img: {
+					file: '',
+					alt: '',
+				},
+			},
 		],
 	},
 }
