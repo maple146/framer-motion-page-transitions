@@ -74,6 +74,15 @@ export const HOME_DATA = {
 					alt: '',
 				},
 			},
+			{
+				title: 'Top Right to Bottom Left',
+				description: 'One way transition',
+				url: '/top-right-to-bottom-left',
+				img: {
+					file: '',
+					alt: '',
+				},
+			},
 		],
 	},
 }
