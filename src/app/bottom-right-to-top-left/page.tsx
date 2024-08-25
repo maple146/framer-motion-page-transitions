@@ -22,7 +22,7 @@ const animationToTop = {
     },
 };
 
-export default function BottomToTop() {
+export default function BottomRightToTopLeft() {
     const [transition, setTransition] = useState<boolean | null>(null)
 
     return (
