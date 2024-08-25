@@ -5,7 +5,7 @@ import TopRightContent from "@/components/top-right-to-bottom-left/TopRightConte
 import BottomLeftContent from "@/components/top-right-to-bottom-left/BottomLeftContent";
 
 
-const animationToBottom = {
+const animationToBottomLeft = {
     initial: {
         x: -1000,
         y: 1000,
@@ -40,7 +40,7 @@ export default function TopRightToBottomLeft() {
                         !transition && (
                             <motion.div
                                 key={'top-section'}
-                                variants={animationToBottom}
+                                variants={animationToBottomLeft}
                                 initial='initial'
                                 animate='target'
                                 exit='exit'
@@ -57,7 +57,7 @@ export default function TopRightToBottomLeft() {
                         transition && (
                             <motion.div
                                 key={'bottom-section'}
-                                variants={animationToBottom}
+                                variants={animationToBottomLeft}
                                 initial='initial'
                                 animate='target'
                                 exit='exit'

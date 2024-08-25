@@ -4,7 +4,7 @@ import { AnimatePresence, MotionConfig, motion } from 'framer-motion';
 import BottomLeftContent from "@/components/bottom-left-to-top-right/BottomLeftContent";
 import TopRightContent from "@/components/bottom-left-to-top-right/TopRightContent";
 
-const animationToTop = {
+const animationToTopRight = {
     initial: {
         x: 1000,
         y: -1000,
@@ -39,7 +39,7 @@ export default function BottomLeftToTopRight() {
                         !transition && (
                             <motion.div
                                 key={'bottom-section'}
-                                variants={animationToTop}
+                                variants={animationToTopRight}
                                 initial='initial'
                                 animate='target'
                                 exit='exit'
@@ -56,7 +56,7 @@ export default function BottomLeftToTopRight() {
                         transition && (
                             <motion.div
                                 key={'top-section'}
-                                variants={animationToTop}
+                                variants={animationToTopRight}
                                 initial='initial'
                                 animate='target'
                                 exit='exit'
