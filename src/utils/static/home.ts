@@ -92,6 +92,42 @@ export const HOME_DATA = {
 					alt: '',
 				},
 			},
+			{
+				title: 'Diagonal back and forth',
+				description: 'Bidirectional transition',
+				url: '/diagonal-back-and-forth-tltbr',
+				img: {
+					file: '',
+					alt: '',
+				},
+			},
+			{
+				title: 'Diagonal back and forth',
+				description: 'Bidirectional transition',
+				url: '/diagonal-back-and-forth-trtbl',
+				img: {
+					file: '',
+					alt: '',
+				},
+			},
+			{
+				title: 'Diagonal back and forth',
+				description: 'Bidirectional transition',
+				url: '/diagonal-back-and-forth-blttr',
+				img: {
+					file: '',
+					alt: '',
+				},
+			},
+			{
+				title: 'Diagonal back and forth',
+				description: 'Bidirectional transition',
+				url: '/diagonal-back-and-forth-brttl',
+				img: {
+					file: '',
+					alt: '',
+				},
+			},
 		],
 	},
 }
