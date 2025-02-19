@@ -1,8 +1,8 @@
 "use client"
 import { useState } from "react";
 import { AnimatePresence, MotionConfig, Variants, motion } from 'framer-motion';
-import RightContent from "@/components/horizontal-back-and-forth/RightContent";
-import LeftContent from "@/components/horizontal-back-and-forth/LeftContent";
+import Box1 from "@/components/box-1/Box1";
+import Box2 from "@/components/box-2/Box2";
 
 type Transition = true | false | null;
 
@@ -22,7 +22,7 @@ const horizontalBackAndForthAnimation: Variants = {
 };
 
 export default function HorizontalBackAndForth() {
-    const [transition, setTransition] = useState<boolean | null>(null)
+    const [transition, setTransition] = useState<boolean | undefined>(false)
 
     return (
         <MotionConfig transition={{ duration: 3 }}>
@@ -44,7 +44,12 @@ export default function HorizontalBackAndForth() {
                                 animate='target'
                                 exit='exit'
                             >
-                                <RightContent setTransition={setTransition} />
+                                <Box1
+                                    title='Left section content'
+                                    enableButton
+                                    transitionValue={transition}
+                                    setTransition={setTransition}
+                                />
                             </motion.div>
                         )
                     }
@@ -63,7 +68,12 @@ export default function HorizontalBackAndForth() {
                                 animate='target'
                                 exit='exit'
                             >
-                                <LeftContent setTransition={setTransition} />
+                                <Box2
+                                    title='Right section content'
+                                    enableButton
+                                    transitionValue={transition}
+                                    setTransition={setTransition}
+                                />
                             </motion.div>
                         )
                     }

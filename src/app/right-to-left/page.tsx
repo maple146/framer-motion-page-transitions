@@ -1,8 +1,8 @@
 "use client"
 import { useState } from "react";
 import { AnimatePresence, MotionConfig, motion } from 'framer-motion';
-import RightContent from "@/components/right-to-left/RightContent";
-import LeftContent from "@/components/right-to-left/LeftContent";
+import Box2 from "@/components/box-2/Box2";
+import Box1 from "@/components/box-1/Box1";
 
 const animationToLeft = {
     initial: {
@@ -20,7 +20,7 @@ const animationToLeft = {
 };
 
 export default function RightToLeft() {
-    const [transition, setTransition] = useState<boolean | null>(null)
+    const [transition, setTransition] = useState<boolean | undefined>(false)
 
     return (
         <MotionConfig transition={{ duration: 3 }}>
@@ -41,7 +41,12 @@ export default function RightToLeft() {
                                 animate='target'
                                 exit='exit'
                             >
-                                <RightContent setTransition={setTransition} />
+                                <Box2
+                                    title='Right section content'
+                                    enableButton
+                                    transitionValue={transition}
+                                    setTransition={setTransition}
+                                />
                             </motion.div>
                         )
                     }
@@ -58,7 +63,7 @@ export default function RightToLeft() {
                                 animate='target'
                                 exit='exit'
                             >
-                                <LeftContent />
+                                <Box1 title='Left section content' />
                             </motion.div>
                         )
                     }
