@@ -7,7 +7,7 @@ const config = {
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
-	],
+  ],
   prefix: "",
   theme: {
     container: {
@@ -52,6 +52,11 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        'cerulean': '#0081A7',
+        'verdigris': '#00AFB9',
+        'light-yellow': '#FDFCDC',
+        'light-orange': '#FED9B7',
+        'bittersweet': '#F07167'
       },
       borderRadius: {
         lg: "var(--radius)",
