@@ -61,6 +61,6 @@ export default function BottomToTop() {
           )}
         </AnimatePresence>
       </motion.main>
-    </MotionConfig>
-  );
+</MotionConfig>
+  )
 }
