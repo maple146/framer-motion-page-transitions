@@ -1,8 +1,8 @@
-'use client'
-import { useState } from 'react'
-import { AnimatePresence, MotionConfig, motion } from 'framer-motion'
-import Box1 from '@/components/box-1/Box1'
-import Box2 from '@/components/box-2/Box2'
+'use client';
+import { useState } from 'react';
+import { AnimatePresence, MotionConfig, motion } from 'framer-motion';
+import Box1 from '@/components/box-1/Box1';
+import Box2 from '@/components/box-2/Box2';
 
 const animationToTop = {
   initial: {
@@ -17,10 +17,10 @@ const animationToTop = {
     y: 1000,
     opacity: 0,
   },
-}
+};
 
 export default function BottomToTop() {
-  const [transition, setTransition] = useState<boolean | undefined>(false)
+  const [transition, setTransition] = useState<boolean | undefined>(false);
 
   return (
     <MotionConfig transition={{ duration: 3 }}>
@@ -62,5 +62,5 @@ export default function BottomToTop() {
         </AnimatePresence>
       </motion.main>
     </MotionConfig>
-  )
+  );
 }
