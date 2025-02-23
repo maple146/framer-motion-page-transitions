@@ -7,6 +7,8 @@ const testEslint = filenames =>
 const testPrettier = filenames =>
   `npx prettier -w ${filenames.map(name => path.relative(process.cwd(), name)).join(' ')}`;
 
+console.log('TEST123');
+
 module.exports = {
   '*.{js,jsx,ts,tsx}': [testEslint, testPrettier],
 };
