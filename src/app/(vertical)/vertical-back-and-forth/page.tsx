@@ -1,8 +1,6 @@
 "use client"
 import { useState } from "react";
 import { AnimatePresence, MotionConfig, Variants, motion } from 'framer-motion';
-import TopContent from "@/components/vertical-back-and-forth/TopContent";
-import BottomContent from "@/components/vertical-back-and-forth/BottomContent";
 import Box1 from "@/components/box-1/Box1";
 import Box2 from "@/components/box-2/Box2";
 
