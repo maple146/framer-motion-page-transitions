@@ -6,8 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "prepare": "husky"
+    "lint": "next lint && npx prettier -w .",
+    "prepare": "husky install && npx husky add .husky/pre-commit \"npx lint-staged\""
   },
   "dependencies": {
     "@radix-ui/react-label": "^2.1.0",
@@ -30,7 +30,9 @@
     "autoprefixer": "^10",
     "eslint": "^8",
     "eslint-config-next": "13.5.6",
+    "eslint-config-prettier": "^10.0.1",
     "husky": "^9.1.7",
+    "lint-staged": "^15.4.3",
     "postcss": "^8",
     "tailwindcss": "^3",
     "typescript": "^5"
