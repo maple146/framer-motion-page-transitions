@@ -3,6 +3,8 @@ import { useState } from "react";
 import { AnimatePresence, MotionConfig, motion } from 'framer-motion';
 import BottomContent from "@/components/bottom-to-top/BottomContent";
 import TopContent from "@/components/bottom-to-top/TopContent";
+import Box1 from "@/components/box-1/Box1";
+import Box2 from "@/components/box-2/Box2";
 
 const animationToTop = {
     initial: {
@@ -20,7 +22,7 @@ const animationToTop = {
 };
 
 export default function BottomToTop() {
-    const [transition, setTransition] = useState<boolean | null>(null)
+    const [transition, setTransition] = useState<boolean | undefined>(false)
 
     return (
         <MotionConfig transition={{ duration: 3 }}>
@@ -41,7 +43,12 @@ export default function BottomToTop() {
                                 animate='target'
                                 exit='exit'
                             >
-                                <BottomContent setTransition={setTransition} />
+                                <Box1
+                                    title='Bottom section content'
+                                    enableButton
+                                    transitionValue={transition}
+                                    setTransition={setTransition}
+                                />
                             </motion.div>
                         )
                     }
@@ -58,7 +65,7 @@ export default function BottomToTop() {
                                 animate='target'
                                 exit='exit'
                             >
-                                <TopContent />
+                                <Box2 title='Top section content' />
                             </motion.div>
                         )
                     }

@@ -23,6 +23,26 @@ export const HOME_DATA = {
 					}
 				]
 			},
+			{
+				title: 'Vertical',
+				cards: [
+					{
+						title: 'Top to Bottom',
+						description: 'One way transition',
+						url: '/top-to-bottom',
+					},
+					{
+						title: 'Bottom to Top',
+						description: 'One way transition',
+						url: '/bottom-to-top',
+					},
+					{
+						title: 'Vertical back and forth',
+						description: 'Bidirectional transition',
+						url: '/vertical-back-and-forth',
+					},
+				]
+			},
 		],
 	},
 }

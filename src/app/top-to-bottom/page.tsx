@@ -1,8 +1,8 @@
 "use client"
 import { useState } from "react";
 import { AnimatePresence, MotionConfig, motion } from 'framer-motion';
-import BottomContent from "@/components/top-to-bottom/BottomContent";
-import TopContent from "@/components/top-to-bottom/TopContent";
+import Box1 from "@/components/box-1/Box1";
+import Box2 from "@/components/box-2/Box2";
 
 const animationToBottom = {
     initial: {
@@ -20,7 +20,7 @@ const animationToBottom = {
 };
 
 export default function TopToBottom() {
-    const [transition, setTransition] = useState<boolean | null>(null)
+    const [transition, setTransition] = useState<boolean | undefined>(false)
 
     return (
         <MotionConfig transition={{ duration: 3 }}>
@@ -38,7 +38,12 @@ export default function TopToBottom() {
                                 animate='target'
                                 exit='exit'
                             >
-                                <TopContent setTransition={setTransition} />
+                                <Box1
+                                    title='Top section content'
+                                    enableButton
+                                    transitionValue={transition}
+                                    setTransition={setTransition}
+                                />
                             </motion.div>
                         )
                     }
@@ -55,7 +60,7 @@ export default function TopToBottom() {
                                 animate='target'
                                 exit='exit'
                             >
-                                <BottomContent />
+                                <Box2 title='Bottom section content' />
                             </motion.div>
                         )
                     }
