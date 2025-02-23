@@ -1,5 +1,5 @@
-import { HomeCardGroupTypes } from '@/types/homeCardsGridTypes'
-import { HomeCard } from './HomeCard'
+import { HomeCardGroupTypes } from '@/types/homeCardsGridTypes';
+import { HomeCard } from './HomeCard';
 
 const HomeCardGroup = ({ title, cards }: HomeCardGroupTypes) => {
   return (
@@ -9,7 +9,7 @@ const HomeCardGroup = ({ title, cards }: HomeCardGroupTypes) => {
         <HomeCard key={`${card.title}-${index}`} {...card} />
       ))}
     </section>
-  )
-}
+  );
+};
 
-export default HomeCardGroup
+export default HomeCardGroup;

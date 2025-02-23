@@ -1,13 +1,13 @@
-import { Button } from '../ui/button'
-import { Card } from '../ui/card'
-import { Dispatch, SetStateAction } from 'react'
+import { Button } from '../ui/button';
+import { Card } from '../ui/card';
+import { Dispatch, SetStateAction } from 'react';
 
 interface Box1Type {
-  title: string
-  transitionValue?: boolean
-  setTransition?: Dispatch<SetStateAction<boolean | undefined>>
-  enableButton?: boolean
-  buttonText?: string
+  title: string;
+  transitionValue?: boolean;
+  setTransition?: Dispatch<SetStateAction<boolean | undefined>>;
+  enableButton?: boolean;
+  buttonText?: string;
 }
 
 export default function Box1({
@@ -26,5 +26,5 @@ export default function Box1({
         </Button>
       )}
     </Card>
-  )
+  );
 }

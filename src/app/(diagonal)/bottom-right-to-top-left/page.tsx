@@ -1,8 +1,8 @@
-'use client'
-import { useState } from 'react'
-import { AnimatePresence, MotionConfig, motion } from 'framer-motion'
-import Box1 from '@/components/box-1/Box1'
-import Box2 from '@/components/box-2/Box2'
+'use client';
+import { useState } from 'react';
+import { AnimatePresence, MotionConfig, motion } from 'framer-motion';
+import Box1 from '@/components/box-1/Box1';
+import Box2 from '@/components/box-2/Box2';
 
 const animationToTopLeft = {
   initial: {
@@ -20,10 +20,10 @@ const animationToTopLeft = {
     y: 1000,
     opacity: 0,
   },
-}
+};
 
 export default function BottomRightToTopLeft() {
-  const [transition, setTransition] = useState<boolean | undefined>(false)
+  const [transition, setTransition] = useState<boolean | undefined>(false);
 
   return (
     <MotionConfig transition={{ duration: 3 }}>
@@ -65,5 +65,5 @@ export default function BottomRightToTopLeft() {
         </AnimatePresence>
       </motion.main>
     </MotionConfig>
-  )
+  );
 }

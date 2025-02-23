@@ -1,5 +1,5 @@
-import { Dispatch, SetStateAction } from 'react'
+import { Dispatch, SetStateAction } from 'react';
 
 export interface setTransitionTypes {
-  setTransition: Dispatch<SetStateAction<boolean | null>>
+  setTransition: Dispatch<SetStateAction<boolean | null>>;
 }

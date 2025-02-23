@@ -90,4 +90,4 @@ export const HOME_DATA = {
       },
     ],
   },
-}
+};

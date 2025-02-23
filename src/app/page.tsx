@@ -1,5 +1,5 @@
-import HomeCardGroup from '@/components/home/HomeCardGroup'
-import { HOME_DATA } from '@/utils/static/home'
+import HomeCardGroup from '@/components/home/HomeCardGroup';
+import { HOME_DATA } from '@/utils/static/home';
 
 export default function Home() {
   return (
@@ -11,5 +11,5 @@ export default function Home() {
         <HomeCardGroup key={`${item.title}-${index}`} {...item} />
       ))}
     </main>
-  )
+  );
 }

@@ -3,9 +3,9 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card'
-import { homeCardTypes } from '@/types/homeCardsGridTypes'
-import Link from 'next/link'
+} from '@/components/ui/card';
+import { homeCardTypes } from '@/types/homeCardsGridTypes';
+import Link from 'next/link';
 
 export function HomeCard({ title, description, url }: homeCardTypes) {
   return (
@@ -21,5 +21,5 @@ export function HomeCard({ title, description, url }: homeCardTypes) {
         </CardHeader>
       </Card>
     </Link>
-  )
+  );
 }

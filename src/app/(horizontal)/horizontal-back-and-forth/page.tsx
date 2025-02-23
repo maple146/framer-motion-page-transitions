@@ -1,10 +1,10 @@
-'use client'
-import { useState } from 'react'
-import { AnimatePresence, MotionConfig, Variants, motion } from 'framer-motion'
-import Box1 from '@/components/box-1/Box1'
-import Box2 from '@/components/box-2/Box2'
+'use client';
+import { useState } from 'react';
+import { AnimatePresence, MotionConfig, Variants, motion } from 'framer-motion';
+import Box1 from '@/components/box-1/Box1';
+import Box2 from '@/components/box-2/Box2';
 
-type Transition = true | false | null
+type Transition = true | false | null;
 
 const horizontalBackAndForthAnimation: Variants = {
   initial: (transition: Transition) => ({
@@ -19,10 +19,10 @@ const horizontalBackAndForthAnimation: Variants = {
     x: transition ? -1000 : 1000,
     opacity: 0,
   }),
-}
+};
 
 export default function HorizontalBackAndForth() {
-  const [transition, setTransition] = useState<boolean | undefined>(false)
+  const [transition, setTransition] = useState<boolean | undefined>(false);
 
   return (
     <MotionConfig transition={{ duration: 3 }}>
@@ -71,5 +71,5 @@ export default function HorizontalBackAndForth() {
         </AnimatePresence>
       </motion.main>
     </MotionConfig>
-  )
+  );
 }
