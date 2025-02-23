@@ -9,7 +9,7 @@ const animationToTop = {
         y: -1000,
         opacity: 0,
     },
-    target: {
+                    target: {
         y: 0,
         opacity: 1,
     },
@@ -17,7 +17,7 @@ const animationToTop = {
         y: 1000,
         opacity: 0,
     },
-};
+}
 
 export default function BottomToTop() {
     const [transition, setTransition] = useState<boolean | undefined>(false)
