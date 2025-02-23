@@ -25,9 +25,9 @@ const diagonalBackAndForthAnimation: Variants = {
 };
 
 export default function DiagonalBackAndForth() {
-  const [transition, setTransition] = useState<boolean | undefined>(false);
+    const [transition, setTransition] = useState<boolean | undefined>(false);
 
-  return (
+return (
     <MotionConfig transition={{ duration: 3 }}>
       <motion.main
         className='flex min-h-screen flex-col items-center justify-center overflow-hidden'
