@@ -4,7 +4,7 @@ export interface homeCardTypes {
     url: string;
 }
 
-export interface homeCardsGridTypes {
+export interface HomeCardGroupTypes {
     title: string;
     cards: homeCardTypes[];
 }
