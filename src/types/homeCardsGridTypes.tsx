@@ -1,10 +1,10 @@
 export interface homeCardTypes {
-    title: string;
-    description: string;
-    url: string;
+  title: string
+  description: string
+  url: string
 }
 
 export interface HomeCardGroupTypes {
-    title: string;
-    cards: homeCardTypes[];
+  title: string
+  cards: homeCardTypes[]
 }
