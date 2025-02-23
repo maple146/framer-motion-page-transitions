@@ -1,3 +1,4 @@
+// import HomeCardGroup from '@/components/home/HomeCardGroup';
 import HomeCardGroup from '@/components/home/HomeCardGroup';
 import { HOME_DATA } from '@/utils/static/home';
 
