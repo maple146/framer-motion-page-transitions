@@ -1,9 +1,8 @@
 "use client"
 import { useState } from "react";
 import { AnimatePresence, MotionConfig, Variants, motion } from 'framer-motion';
-// Cambiar imports
-import TopContent from "@/components/vertical-back-and-forth/TopContent";
-import BottomContent from "@/components/vertical-back-and-forth/BottomContent";
+import Box1 from "@/components/box-1/Box1";
+import Box2 from "@/components/box-2/Box2";
 
 type Transition = true | false | null;
 
@@ -26,7 +25,7 @@ const diagonalBackAndForthAnimation: Variants = {
 };
 
 export default function DiagonalBackAndForth() {
-    const [transition, setTransition] = useState<boolean | null>(null)
+    const [transition, setTransition] = useState<boolean | undefined>(false)
 
     return (
         <MotionConfig transition={{ duration: 3 }}>
@@ -42,13 +41,19 @@ export default function DiagonalBackAndForth() {
                     {
                         !transition && (
                             <motion.div
-                                key={'top-section'}
+                                key={'top-left-section'}
                                 variants={diagonalBackAndForthAnimation}
                                 initial='initial'
                                 animate='target'
                                 exit='exit'
                             >
-                                <TopContent setTransition={setTransition} />
+                                <Box1
+                                    title='Top left section content'
+                                    enableButton
+                                    buttonText='Go to bottom right section'
+                                    transitionValue={transition}
+                                    setTransition={setTransition}
+                                />
                             </motion.div>
                         )
                     }
@@ -60,14 +65,20 @@ export default function DiagonalBackAndForth() {
                     {
                         transition && (
                             <motion.div
-                                key={'bottom-section'}
+                                key={'bottom-right-section'}
                                 variants={diagonalBackAndForthAnimation}
                                 custom={transition}
                                 initial='initial'
                                 animate='target'
                                 exit='exit'
                             >
-                                <BottomContent setTransition={setTransition} />
+                                <Box2
+                                    title='Bottom right section content'
+                                    enableButton
+                                    buttonText='Go to top left section'
+                                    transitionValue={transition}
+                                    setTransition={setTransition}
+                                />
                             </motion.div>
                         )
                     }

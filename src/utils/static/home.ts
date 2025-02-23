@@ -43,6 +43,51 @@ export const HOME_DATA = {
 					},
 				]
 			},
+			{
+				title: 'Diagonal',
+				cards: [
+					{
+						title: 'Bottom Left to Top Right',
+						description: 'One way transition',
+						url: '/bottom-left-to-top-right',
+					},
+					{
+						title: 'Bottom Right to Top Left',
+						description: 'One way transition',
+						url: '/bottom-right-to-top-left',
+					},
+					{
+						title: 'Top Right to Bottom Left',
+						description: 'One way transition',
+						url: '/top-right-to-bottom-left',
+					},
+					{
+						title: 'Top Left to Bottom Right',
+						description: 'One way transition',
+						url: '/top-left-to-bottom-right',
+					},
+					{
+						title: 'Diagonal back and forth',
+						description: 'Bidirectional transition',
+						url: '/diagonal-back-and-forth-brttl',
+					},
+					{
+						title: 'Diagonal back and forth',
+						description: 'Bidirectional transition',
+						url: '/diagonal-back-and-forth-blttr',
+					},
+					{
+						title: 'Diagonal back and forth',
+						description: 'Bidirectional transition',
+						url: '/diagonal-back-and-forth-tltbr',
+					},
+					{
+						title: 'Diagonal back and forth',
+						description: 'Bidirectional transition',
+						url: '/diagonal-back-and-forth-trtbl',
+					},
+				]
+			},
 		],
 	},
 }

@@ -1,8 +1,8 @@
 "use client"
 import { useState } from "react";
 import { AnimatePresence, MotionConfig, motion } from 'framer-motion';
-import BottomRightContent from "@/components/bottom-right-to-top-left/BottomRightContent";
-import TopLeftContent from "@/components/bottom-right-to-top-left/TopLeftContent";
+import Box1 from "@/components/box-1/Box1";
+import Box2 from "@/components/box-2/Box2";
 
 const animationToTopLeft = {
     initial: {
@@ -23,7 +23,7 @@ const animationToTopLeft = {
 };
 
 export default function BottomRightToTopLeft() {
-    const [transition, setTransition] = useState<boolean | null>(null)
+    const [transition, setTransition] = useState<boolean | undefined>(false)
 
     return (
         <MotionConfig transition={{ duration: 3 }}>
@@ -38,13 +38,19 @@ export default function BottomRightToTopLeft() {
                     {
                         !transition && (
                             <motion.div
-                                key={'bottom-section'}
+                                key={'bottom-right-section'}
                                 variants={animationToTopLeft}
                                 initial='initial'
                                 animate='target'
                                 exit='exit'
                             >
-                                <BottomRightContent setTransition={setTransition} />
+                                <Box1
+                                    title='Bottom right section content'
+                                    enableButton
+                                    buttonText='Go to top left section'
+                                    transitionValue={transition}
+                                    setTransition={setTransition}
+                                />
                             </motion.div>
                         )
                     }
@@ -55,13 +61,13 @@ export default function BottomRightToTopLeft() {
                     {
                         transition && (
                             <motion.div
-                                key={'top-section'}
+                                key={'top-left-section'}
                                 variants={animationToTopLeft}
                                 initial='initial'
                                 animate='target'
                                 exit='exit'
                             >
-                                <TopLeftContent />
+                                <Box2 title='Top left section content' />
                             </motion.div>
                         )
                     }
