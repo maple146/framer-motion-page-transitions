@@ -59,8 +59,8 @@ export default function BottomToTop() {
               <Box2 title='Top section content' />
             </motion.div>
           )}
-        </AnimatePresence>
-      </motion.main>
+  </AnimatePresence>
+                </motion.main>
 </MotionConfig>
   )
 }
