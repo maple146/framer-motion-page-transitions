@@ -1,7 +1,7 @@
 import { HomeCardGroupTypes } from '@/types/homeCardsGridTypes';
 import { HomeCard } from './HomeCard';
 
-const HomeCardGroup = ({ title, cards }: HomeCardGroupTypes) => {
+export const HomeCardGroup = ({ title, cards }: HomeCardGroupTypes) => {
   return (
     <section className='container grid auto-cols-[minmax(0,_2fr)] gap-4 items-center justify-center'>
       <h2 className='col-span-3 text-center text-white text-4xl'>{title}</h2>
@@ -11,5 +11,3 @@ const HomeCardGroup = ({ title, cards }: HomeCardGroupTypes) => {
     </section>
   );
 };
-
-export default HomeCardGroup;
