@@ -6,10 +6,11 @@ interface Box1Type {
     title: string,
     transitionValue?: boolean;
     setTransition?: Dispatch<SetStateAction<boolean | undefined>>,
-    enableButton?: boolean
+    enableButton?: boolean,
+    buttonText?: string
 }
 
-export default function Box1({ title, enableButton, transitionValue, setTransition, }: Box1Type) {
+export default function Box1({ title, enableButton, buttonText, transitionValue, setTransition, }: Box1Type) {
     return (
         <Card className="h-[500px] w-[500px] flex flex-col justify-center items-center bg-light-yellow">
             <h1 className="text-black mb-2">{title}</h1>
@@ -18,7 +19,7 @@ export default function Box1({ title, enableButton, transitionValue, setTransiti
                     <Button
                         onClick={() => setTransition?.(!transitionValue)}
                     >
-                        Go to right section
+                        {buttonText}
                     </Button>
                 )
             }

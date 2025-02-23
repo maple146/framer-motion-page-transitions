@@ -41,6 +41,7 @@ export default function LeftToRight() {
                                 <Box1
                                     title='Left section content'
                                     enableButton
+                                    buttonText='Go to right section'
                                     transitionValue={transition}
                                     setTransition={setTransition}
                                 />

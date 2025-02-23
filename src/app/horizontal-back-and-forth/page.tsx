@@ -8,7 +8,7 @@ type Transition = true | false | null;
 
 const horizontalBackAndForthAnimation: Variants = {
     initial: (transition: Transition) => ({
-        x: transition ? -1000 : 1000,
+        x: transition ? 1000 : -1000,
         opacity: 0,
     }),
     target: {
@@ -16,7 +16,7 @@ const horizontalBackAndForthAnimation: Variants = {
         opacity: 1,
     },
     exit: (transition: Transition) => ({
-        x: transition ? 1000 : -1000,
+        x: transition ? -1000 : 1000,
         opacity: 0,
     }),
 };
@@ -47,6 +47,7 @@ export default function HorizontalBackAndForth() {
                                 <Box1
                                     title='Left section content'
                                     enableButton
+                                    buttonText='Go to right section'
                                     transitionValue={transition}
                                     setTransition={setTransition}
                                 />
@@ -71,6 +72,7 @@ export default function HorizontalBackAndForth() {
                                 <Box2
                                     title='Right section content'
                                     enableButton
+                                    buttonText='Go to left section'
                                     transitionValue={transition}
                                     setTransition={setTransition}
                                 />

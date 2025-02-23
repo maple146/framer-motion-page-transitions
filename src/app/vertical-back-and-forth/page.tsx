@@ -49,6 +49,7 @@ export default function VerticalBackAndForth() {
                                 <Box1
                                     title='Top section content'
                                     enableButton
+                                    buttonText='Go to bottom section'
                                     transitionValue={transition}
                                     setTransition={setTransition}
                                 />
@@ -73,6 +74,7 @@ export default function VerticalBackAndForth() {
                                 <Box2
                                     title='Bottom section content'
                                     enableButton
+                                    buttonText='Go to top section'
                                     transitionValue={transition}
                                     setTransition={setTransition}
                                 />

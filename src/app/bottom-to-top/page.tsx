@@ -46,6 +46,7 @@ export default function BottomToTop() {
                                 <Box1
                                     title='Bottom section content'
                                     enableButton
+                                    buttonText='Go to top section'
                                     transitionValue={transition}
                                     setTransition={setTransition}
                                 />
